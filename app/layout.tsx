@@ -1,5 +1,8 @@
-import "./globals.css";
 
+import "./globals.css";
+import Header from "./components/header";
+import BackgroundFX from "./components/BackgroundFX";
+import RouteTransition from "./components/RouteTransition";
 
 export default function RootLayout({
   children,
@@ -9,7 +12,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <BackgroundFX />
+        <Header />
+        <main>
+          <RouteTransition>{children}</RouteTransition>
+        </main>
       </body>
     </html>
   );

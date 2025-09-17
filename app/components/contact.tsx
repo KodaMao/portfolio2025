@@ -1,6 +1,4 @@
 "use client"
-// import { useState } from 'react';
-// import Head from 'next/head';
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
@@ -8,68 +6,66 @@ export default function Contact() {
 const [state, handleSubmit] = useForm("mnnbrwwk");
   if (state.succeeded) {
     return (
-      <section id="contact" className="min-h-screen flex items-center justify-center pt-20">
-        <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full text-center">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <section id="contact" className="min-h-[60vh] flex items-center justify-center pt-24 pb-16">
+        <div className="panel p-8 md:p-10 max-w-lg w-full text-center">
+          <div className="w-14 h-14 bg-[#e5f3ff] rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg className="w-7 h-7 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Thank You!</h2>
-          <p className="text-gray-600">Thanks for reaching out! I&apos;ve received your message and will respond as soon as possible. Talk to you soon!</p>
+          <h2 className="text-xl font-semibold mb-2">Thank you!</h2>
+          <p className="text-[#374151]">Thanks for reaching out. I&apos;ll get back to you soon.</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center pt-20">
-      <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Me</h1>
-        
-        <form onSubmit={handleSubmit} className="space-y-6">
+    <section id="contact" className="min-h-[70vh] flex items-center justify-center pt-24 pb-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="panel p-8 md:p-10 max-w-lg mx-auto w-full">
+          <h1 className="text-2xl font-semibold mb-6 text-center">Contact me</h1>
+          <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-sm font-medium mb-1">
               Email Address
             </label>
             <input
               id="email"
-              type="email" 
+              type="email"
               name="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-              placeholder="your.email@example.com"
+              className="w-full px-4 py-2 border border-[#e5e7eb] rounded-lg focus:ring-2 focus:ring-[#2563eb] focus:border-[#2563eb] outline-none"
+              placeholder="your@email.com"
             />
-            <ValidationError 
-              prefix="Email" 
+            <ValidationError
+              prefix="Email"
               field="email"
               errors={state.errors}
               className="text-red-500 text-sm mt-1"
             />
           </div>
-          
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="message" className="block text-sm font-medium mb-1">
               Message
             </label>
             <textarea
               id="message"
               name="message"
               rows={4}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-              placeholder="Enter your message here..."
+              className="w-full px-4 py-2 border border-[#e5e7eb] rounded-lg focus:ring-2 focus:ring-[#2563eb] focus:border-[#2563eb] outline-none"
+              placeholder="Your message..."
             />
-            <ValidationError 
-              prefix="Message" 
+            <ValidationError
+              prefix="Message"
               field="message"
               errors={state.errors}
               className="text-red-500 text-sm mt-1"
             />
           </div>
-          
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             disabled={state.submitting}
-            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 transition"
+            className="w-full bg-[#111827] text-white py-3 px-4 rounded-lg font-medium hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#111827] disabled:opacity-50"
           >
             {state.submitting ? (
               <span className="flex items-center justify-center">
@@ -81,7 +77,8 @@ const [state, handleSubmit] = useForm("mnnbrwwk");
               </span>
             ) : "Submit"}
           </button>
-        </form>
+          </form>
+        </div>
       </div>
     </section>
   );
