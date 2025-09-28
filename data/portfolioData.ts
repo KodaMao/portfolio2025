@@ -16,8 +16,9 @@ export const portfolioData = {
       title: "IListaMo",
       description: "IListaMo is a modern, client-focused business management app that streamlines the creation of estimates and quotes, tracks client interactions, and generates professional PDF documents. Built with Next.js and Tailwind CSS, it features category-based item grouping, customizable currency, and a polished, user-friendly interface—empowering freelancers and small businesses to stay organized and look professional.",
       technologies: ["Next.js", "Tailwind"],
-      liveUrl: "https://ilistamo.vercel.app",
-      image: "/images/projects/ilistamo_app.png"
+  liveUrl: "https://ilistamo.vercel.app",
+  githubUrl: "https://github.com/yourname/ilistamo",
+  image: "/images/projects/ilistamo_app.png"
     },
     // {
     //   id: 2,
