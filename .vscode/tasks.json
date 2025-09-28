@@ -1,12 +1,5 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		{
-			"label": "Create branch and commit changes",
-			"type": "shell",
-			"command": "git checkout -b feat/pro-theme-background-animations; git add -A; git commit -m \"chore: professional theme + animations (navbar, hero, route transitions, background FX, contact restyle, Tailwind v4 enabled, globals cleanup)\"",
-			"problemMatcher": [],
-			"group": "build"
-		}
 	]
 }
