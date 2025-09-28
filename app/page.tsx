@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Header from "./components/header";
 import Hero from "./components/hero";
-import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -13,10 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
       <main>
         <Hero />
-        <Contact />
       </main>
     </>
   );
