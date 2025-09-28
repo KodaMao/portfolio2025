@@ -29,7 +29,6 @@ export default function ProjectsPage() {
                   height={160}
                   className="h-40 w-full object-cover bg-gray-200"
                   loading="lazy"
-                  priority={false}
                 />
               ) : (
                 <div className="h-40 bg-gray-200" aria-hidden />
