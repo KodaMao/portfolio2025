@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolioData";
 
 export const metadata = {
@@ -21,9 +22,11 @@ export default function ProjectsPage() {
           {projects.map((p) => (
             <li key={p.id} className="panel overflow-hidden">
               {p.image ? (
-                <img
+                <Image
                   src={p.image}
                   alt={p.title}
+                  width={600}
+                  height={160}
                   className="h-40 w-full object-cover bg-gray-200"
                   loading="lazy"
                 />

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 }
 
-export default function BlogPostPage({ params }: { params: Params }) {
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = portfolioData.blog?.posts.find((p) => p.slug === params.slug);
   if (!post) return notFound();
 
